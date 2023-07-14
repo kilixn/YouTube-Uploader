@@ -1,1 +1,4 @@
-
+chromedriver_autoinstaller
+undetected_chromedriver
+selenium
+xvfbwrapper
