@@ -1,3 +1,6 @@
+# author : Kilian K.
+# source : https://github.com/Kilixn
+
 import os
 import random
 import sys
