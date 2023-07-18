@@ -4,6 +4,7 @@ import sys
 import time
 import re
 import chromedriver_autoinstaller
+import argparse
 
 import undetected_chromedriver as uc
 
@@ -101,14 +102,31 @@ from xvfbwrapper import Xvfb
       bot.quit()
       vdisplay.stop()
 
-    def main():
-	      # get video to upload
-        path_to_video = '/home/k/videos/play.mp4'
+    def Arguments():
 
-        YouTubeBot.uploadBot(path_to_video)
-        print('check youtube channel')
+      parser = argparse.ArgumentParser(description='Process some integers.')
+      args.add_argument('-h', '--help', help='shows help')
+
+      args.add_argument('-u', '-user', help='[required] this is usage user@gmail.com:password ')
+
+      args.add_argument('-f', '--file', help='[required] path to video e.g. /home/user/media/video.mp4')
+
+      args.add_argument('-r', '--remove', help='[optional] this will delete the video after an successful upload.')
+
+      args.add_argument('-d', '--debug', help='[optional] creates Screenshots for troubleshooting.')
+
+      return args
+
+    def main():
+      # check arguments 
+      
+	    # get video to upload
+      path_to_video = '/home/k/videos/play.mp4'
+
+      YouTubeBot.uploadBot(path_to_video)
+      print('check youtube channel.ss')
         
-        # delete video after upload
-        os.remove(path_to_video)
+      # delete video after upload
+      os.remove(path_to_video)
 
 YouTubeBot.main()
