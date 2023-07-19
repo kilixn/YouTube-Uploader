@@ -13,14 +13,14 @@ import undetected_chromedriver as uc
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from xvfbwrapper import Xvfb
+#from xvfbwrapper import Xvfb
 
 class YouTubeBot:
     def uploadBot(video):
       #chromedriver_autoinstaller.install()
 
-      vdisplay = Xvfb(width=900, height=740)
-      vdisplay.start()
+      #vdisplay = Xvfb(width=900, height=740)
+      #vdisplay.start()
       time.sleep(2)
 
       #LOGIN into YouTube
@@ -42,14 +42,14 @@ class YouTubeBot:
       options.add_argument("--start-maximized")
       options.add_argument("--no-sandbox")
       options.add_argument("--disable-setuid-sandbox")
-     # options.add_argument("--headless")
+      options.add_argument("--headless")
      # options.add_argument('--disable-gpu')
      # options.add_argument('--disable-dev-shm-usage')
     #  options.add_argument('--no-sandbox')
       
-      options.binary_location = '/usr/bin/brave'
+      # options.binary_location = '/usr/bin/brave'
 
-      bot = uc.Chrome(options=options, use_subprocess=True) 
+      bot = uc.Chrome(options=options) 
 
       bot.get('https://studio.youtube.com/')
       
@@ -103,7 +103,7 @@ class YouTubeBot:
       done_btn.click()
       ##time.sleep(random.randint(1, 5))
       bot.quit()
-      vdisplay.stop()
+      #vdisplay.stop()
 
     def Arguments():
 
@@ -124,7 +124,7 @@ class YouTubeBot:
       # check arguments 
       
 	    # get video to upload
-      path_to_video = '/home/k/videos/play.mp4'
+      path_to_video = 'mov_bbb.mp4'
 
       YouTubeBot.uploadBot(path_to_video)
       print('check youtube channel.ss')

@@ -28,7 +28,7 @@ class ScraperTools():
 
         return User_Agents[randint(0, (len(User_Agents) -1))]
 
-    def webdriver(useragent :str, proxy :str, icognito :bool, headless :bool,  ):
+    def webdriver(useragent :str, proxy :str, icognito :bool, headless :bool):
 
         gchrome = uc.ChromeOptions()
         
