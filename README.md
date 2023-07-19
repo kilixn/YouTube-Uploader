@@ -18,4 +18,4 @@ Installing
 How to run
 ---------------
 
-python3 main.py -f video.mp4
+python3 main.py -u mail@gmail.com:password -f video.mp4
