@@ -1,4 +1,6 @@
-chromedriver_autoinstaller
-undetected_chromedriver
-selenium
-xvfbwrapper
+chromedriver_autoinstaller==3.5.0
+undetected_chromedriver==3.5.0
+selenium==4.10.0
+
+xvfbwrapper==0.2.9
+argparse
