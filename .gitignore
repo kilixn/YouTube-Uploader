@@ -1,1 +1,9 @@
+# py files
 __pycache__/
+
+# debugging files
+screenshots/
+scraper.log
+
+# demo video
+mov_bbb.mp4

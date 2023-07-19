@@ -1,4 +1,5 @@
-# toolset for web scraping
+# simple toolset for web scraping 
+# Author : Kilian K.
 # useragents, chrome driver, logger, proxy connect
 
 import logging
@@ -20,8 +21,10 @@ User_Agents = [
 class ScraperTools():
 
     def Tools_Logger():
-        logging.basicConfig(filename='scraper.log', encoding='utf-8', level=logging.DEBUG)
+        logging.basicConfig(filename='scraper.log', level=logging.DEBUG)
         logging.info('Logging started')
+
+        return logging
 
     def get_random_userAgent():
         # returns random User Agent from the User_Agents Array
